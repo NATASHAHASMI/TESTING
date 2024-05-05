@@ -17,11 +17,11 @@ if ENVIRONMENT:
         MUST_JOIN = MUST_JOIN.replace("@", "")
 else:
     # Fill the Values
-    API_ID = 0
-    API_HASH = ""
-    BOT_TOKEN = ""
-    DATABASE_URL = ""
+    API_ID = 22427221
+    API_HASH = "2785b4528c12682e515db3762463c126"
+    BOT_TOKEN = "6550852346:AAHN6R9CGY0lL8RN2SF-VP9aohp6vVXVS6M"
+    DATABASE_URL = "postgres://koyeb-adm:7yEXzg3wFtZK@ep-yellow-math-a2ziaq6n.eu-central-1.pg.koyeb.app/koyebdb"
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
-    MUST_JOIN = ""
+    MUST_JOIN = "MYFLiiX"
     if MUST_JOIN.startswith("@"):
         MUST_JOIN = MUST_JOIN[1:]
