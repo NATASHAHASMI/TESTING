@@ -1,7 +1,7 @@
 from Data import Data
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.errors.exceptions.bad_request_400 import ButtonURLInvalid
+from pyrogram.errors import ButtonUrlInvalid
 from ChannelBot.database.users_sql import remove_channel as urc
 from ChannelBot.database.channel_sql import (
     remove_channel as crc,
