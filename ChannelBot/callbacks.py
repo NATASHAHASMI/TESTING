@@ -340,8 +340,6 @@ async def start(bot, msg):
                 ['Manage Channels'],
                 ['Report a Problem']
             ],
-            one_time_keyboard=True,
             resize_keyboard=True
         )
-                            )
-                    
+    )
