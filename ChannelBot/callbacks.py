@@ -25,7 +25,7 @@ from ChannelBot.string_to_buttons import string_to_buttons
 async def _callbacks(bot: Client, callback_query: CallbackQuery):
     user = await bot.get_me()
     user_id = callback_query.from_user.id
-    mention = user["mention"]
+    mention = user.username
     query = callback_query.data.lower()
     if query.startswith("home"):
         if query == 'home':
