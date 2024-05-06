@@ -14,8 +14,8 @@ By @GKBOTZ
     """
 
     # Home Button
-    home_buttons = [
-        [InlineKeyboardButton(text="🏠 ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ 🏠", callback_data="home")],
+    home = [
+        [InlineKeyboardButton(text="🏠 ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ 🏠", callback_data="home")]
     ]
 
     # Rest Buttons
