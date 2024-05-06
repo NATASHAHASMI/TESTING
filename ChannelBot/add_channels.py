@@ -61,17 +61,12 @@ async def _add_channels(bot: Client, msg):
                 else:
                     text = 'This is not a channel message. Please try forwarding again  or /cancel the process.'
                     channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id)
-                    else:
-            if channel.text.startswith('/'):
-                await channel.reply('Cancelled `Add Channel` Process !', quote=True)
-                break
             else:
-                # Check if it's a reply to another message
-                reply_to_message_id = None
-                if channel.reply_to_message:
-                    reply_to_message_id = channel.reply_to_message.message_id
-
-                text = 'Please forward a channel message or /cancel the process.'
-                channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=reply_to_message_id, filters=~filters.me)
+                if channel.text.startswith('/'):
+                    await channel.reply('Cancelled `Add Channel` Process !', quote=True)
+                    break
+                else:
+                    text = 'Please forward a channel message or /cancel the process.'
+                    channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id, filters=~filters.me)
     except asyncio.exceptions.TimeoutError:
         await msg.reply('Process has been automatically cancelled', quote=True)
