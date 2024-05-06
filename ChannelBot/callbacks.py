@@ -322,6 +322,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         print(f"An error occurred: {str(e)}")
 
 # Start Message
+# Start Message
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
 async def start(bot, msg):
     user = await bot.get_me()
@@ -339,7 +340,6 @@ async def start(bot, msg):
                 ['+ Add Channels +'],
                 ['Manage Channels'],
                 ['Report a Problem']
-            ],
-            resize_keyboard=True
+            ]
         )
     )
