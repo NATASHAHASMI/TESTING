@@ -55,7 +55,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             message_id=message_id,
             text=Data.ABOUT,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(Data.home_buttons),
+            reply_markup=InlineKeyboardMarkup(Data.home),
         )
     elif query == "help":
         chat_id = callback_query.from_user.id
@@ -65,7 +65,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             message_id=message_id,
             text="**Here's How to use me**\n" + Data.HELP,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(Data.home_buttons),
+            reply_markup=InlineKeyboardMarkup(Data.home),
         )
     elif query.startswith('settings'):
         channel_id = int(query.split('+')[1])
